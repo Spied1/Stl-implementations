@@ -20,19 +20,19 @@ public:
   Queue(const Queue &other) { QueueList = other.QueueList; };
 
   // Добавляет элемент в конец очереди.
-  void push(const T &x) { QueueList.push_back(x); }; //+
+  void push(const T &x) { QueueList.push_back(x); }; 
 
   // Возвращает размер очереди (сколько памяти уже занято)
-  std::size_t size() { return QueueList.size(); }; //+
+  std::size_t size() { return QueueList.size(); }; 
 
   // Получает ссылку на первый элемент очереди
-  T &front() { return QueueList.front(); }; //+
+  T &front() { return QueueList.front(); }; 
 
   // Получает ссылку на последний элемент очереди
-  T &back() { return QueueList.end(); }; //+
+  T &back() { return QueueList.end(); }; 
 
   // Проверяет является ли контейнер пустым
-  bool empty() { return QueueList.empty(); }; //+
+  bool empty() { return QueueList.empty(); }; 
 
   // Удаляет элемент из начала очереди. Возвращает удаленный элемент.
   T pop() {
@@ -47,7 +47,7 @@ public:
   }; //+
 
   // Меняет содержимое с другой очередью. q1.swap(q2);
-  void swap(Queue &other) { QueueList.swap(other.QueueList); }; //+
+  void swap(Queue &other) { QueueList.swap(other.QueueList); }; 
   // Очищает память очереди
   ~Queue(){
 
@@ -56,7 +56,7 @@ public:
   std::list<T> giveElement() { return QueueList; }
 
   // Перезаписывает текущую очередь очередью other
-  Queue &operator=(const Queue &other) { QueueList = other.QueueList; }; //+
+  Queue &operator=(const Queue &other) { QueueList = other.QueueList; }; 
 
   // Создает новую очередь перемещая существующую
   Queue(Queue &&other) {
